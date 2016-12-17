@@ -1,6 +1,7 @@
 class ParamsParser
   def self.parse(params)
-    final = split_string(params["values"])
+    raise ParamsError if params.nil?
+    final = split_string(params)
     change_into_integers(final)
   end
 

@@ -1,6 +1,10 @@
 class App < AdderApp::Application
   require 'Adder'
   get '/sum' do
-    Adder[*ParamsParser.parse(request.params)]
+    begin
+      Adder[*ParamsParser.parse(request.params["values"])]
+    rescue ParamsError
+      "Provide params"
+    end
   end
 end
