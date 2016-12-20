@@ -8,7 +8,5 @@ module AdderApp
     require './app.rb'
 
     use BetterErrors::Middleware if ENV['RACK_ENV'].to_sym == :development
-
-    map('/') { run App.new }
   end
 end

@@ -1,15 +1,8 @@
 GIT
   remote: git://github.com/gpks/adder_gem.git
-  revision: 2ade71c3589abd9db7d1bf6c46002386dc50a184
+  revision: 09eb79b541130084e25dc642aac18d2ed18ac7b8
   specs:
-    Adder (0.0.0)
-
-GIT
-  remote: git://github.com/patriciomacadden/hobbit-contrib.git
-  revision: b7413b82eaffe9f4e4611a2e1e192038a3e016bf
-  specs:
-    hobbit-contrib (0.7.1)
-      hobbit
+    adder (0.0.0)
 
 GIT
   remote: git://github.com/patriciomacadden/hobbit.git
@@ -25,49 +18,24 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     coderay (1.1.1)
-    daemons (1.2.4)
-    debug_inspector (0.0.2)
     erubis (2.7.0)
-    eventmachine (1.2.1)
-    hike (1.2.3)
     minitest (5.10.1)
-    multi_json (1.12.1)
     rack (1.6.5)
-    rack-protection (1.5.3)
-      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (12.0.0)
-    sprockets (2.12.4)
-      hike (~> 1.2)
-      multi_json (~> 1.0)
-      rack (~> 1.0)
-      tilt (~> 1.1, != 1.3.0)
-    thin (1.7.0)
-      daemons (~> 1.0, >= 1.0.9)
-      eventmachine (~> 1.0, >= 1.0.4)
-      rack (>= 1, < 3)
-    tilt (1.3.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  Adder!
+  adder!
   better_errors
-  binding_of_caller
   hobbit!
-  hobbit-contrib!
   minitest
-  rack-protection
   rack-test
   rake
-  sprockets (~> 2.12.1)
-  thin
-  tilt (~> 1.3.0)
 
 BUNDLED WITH
    1.13.6

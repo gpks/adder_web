@@ -1,10 +1,10 @@
 require 'minitest_helper'
 
-describe AdderApp::Application do
+describe App do
   include Rack::Test::Methods
 
   def app
-    AdderApp::Application.new
+    App.new
   end
 
   describe 'GET /sum' do

@@ -1,3 +1,3 @@
 require File.expand_path('../config/application', __FILE__)
 
-run AdderApp::Application.new
+run App.new
