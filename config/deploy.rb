@@ -1,7 +1,6 @@
 # config valid only for current version of Capistrano
 lock "3.7.1"
 
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require 'rvm/capistrano'
 set :rvm_ruby_string, '1.9.3'
 
@@ -21,12 +20,12 @@ set(:run_method) { use_sudo ? :sudo : :run }
 # This is needed to correctly handle sudo password prompt
 default_run_options[:pty] = true
 
-set :group, user
-set :runner, user
+# set :group, user
+# set :runner, user
 
-set :host, "#{user}@myhost" # We need to be able to SSH to that box as this user.
-role :web, host
-role :app, host
+# set :host, "#{user}@myhost" # We need to be able to SSH to that box as this user.
+# role :web, host
+# role :app, host
 
 set :rails_env, :production
 
