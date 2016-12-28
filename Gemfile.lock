@@ -14,17 +14,38 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    airbrussh (1.1.1)
+      sshkit (>= 1.6.1, != 1.7.0)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    capistrano (3.7.1)
+      airbrussh (>= 1.0.0)
+      capistrano-harrow
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-harrow (0.5.3)
     coderay (1.1.1)
     erubis (2.7.0)
+    i18n (0.7.0)
+    kgio (2.10.0)
     minitest (5.10.1)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (4.0.0)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
+    raindrops (0.17.0)
     rake (12.0.0)
+    sshkit (1.11.5)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
+    unicorn (5.2.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -32,10 +53,12 @@ PLATFORMS
 DEPENDENCIES
   adder!
   better_errors
+  capistrano (~> 3.7)
   hobbit!
   minitest
   rack-test
   rake
+  unicorn
 
 BUNDLED WITH
    1.13.6
