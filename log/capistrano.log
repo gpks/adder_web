@@ -1,0 +1,40 @@
+# Logfile created on 2016-12-28 22:29:28 +0100 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:29:28 +0100 cap production deploy:setup
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:30:08 +0100 cap production deploy:setup
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:30:35 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [5fb055f3] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [5fb055f3] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:31:05 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [b7f27c01] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [b7f27c01] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:35:37 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [21571d03] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [21571d03] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:36:04 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [81b0cfba] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [81b0cfba] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:36:42 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [8a47d033] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [8a47d033] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:44:30 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [230c0866] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [230c0866] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:45:01 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
