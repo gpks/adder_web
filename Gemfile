@@ -9,6 +9,7 @@ group :development do
   gem 'better_errors'
   gem 'rake'
   gem "capistrano", "~> 3.7"
+  gem 'capistrano3-unicorn'
 end
 
 group :test do
