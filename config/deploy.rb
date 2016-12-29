@@ -18,12 +18,12 @@ set(:run_method) { use_sudo ? :sudo : :run }
 # set :group, user
 # set :runner, user
 
-# set :host, "#{fetch(:user)}@ksionex.tk" # We need to be able to SSH to that box as this user.
+set :host, "#{fetch(:user)}@ksionex.tk" # We need to be able to SSH to that box as this user.
 # role :web, host
-# role :app, host
+role :app, "#{fetch(:host)}"
 # puts "#{fetch(:host)}"
 # Where will it be located on a server?
-set :deploy_to, "/www/#{fetch(:application)}"
+set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 set :unicorn_conf, "#{fetch(:deploy_to)}/current/config/unicorn.rb"
 set :unicorn_pid, "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
 
