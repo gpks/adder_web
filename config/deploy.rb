@@ -42,4 +42,4 @@ namespace :deploy do
   # end
 end
 
-after 'deploy:restart'
+after 'deploy:publishing', 'deploy:restart'

@@ -8,8 +8,8 @@ gem 'rvm-capistrano'
 group :development do
   gem 'better_errors'
   gem 'rake'
-  gem "capistrano", "~> 3.7"
   gem 'capistrano3-unicorn'
+  gem "capistrano", "~> 3.7"
 end
 
 group :test do
