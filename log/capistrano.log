@@ -38,3 +38,112 @@
   INFO ---------------------------------------------------------------------------
   INFO START 2016-12-28 22:45:01 +0100 cap production deploy:check
   INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:45:52 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:46:02 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:49:31 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:50:40 +0100 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:51:03 +0100 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:51:38 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:54:10 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [e2ca31ef] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [e2ca31ef] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:55:09 +0100 cap production git:wrapper
+  INFO ---------------------------------------------------------------------------
+  INFO [1da8890c] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [1da8890c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:55:17 +0100 cap production git:wrapper
+  INFO ---------------------------------------------------------------------------
+  INFO [ca8bddb5] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [ca8bddb5] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:57:02 +0100 cap production git:wrapper
+  INFO ---------------------------------------------------------------------------
+  INFO [cb251b91] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [cb251b91] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:57:21 +0100 cap production git:wrapper
+  INFO ---------------------------------------------------------------------------
+  INFO [54a94885] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [54a94885] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:57:32 +0100 cap production git:wrapper
+  INFO ---------------------------------------------------------------------------
+  INFO [455ceb49] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [455ceb49] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:57:46 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [5abe6382] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [5abe6382] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:57:52 +0100 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:57:59 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:58:27 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [97670eec] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [97670eec] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 22:58:58 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-28 23:00:14 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [44dc467c] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [44dc467c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-29 09:47:07 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [17430b90] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [17430b90] Command: /usr/bin/env mkdir -p /tmp
+  INFO [17430b90] Finished in 5.186 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-adder_web-production-gosia.sh 0.0%
+  INFO Uploading /tmp/git-ssh-adder_web-production-gosia.sh 100.0%
+  INFO [f88d7f28] Running /usr/bin/env chmod 700 /tmp/git-ssh-adder_web-production-gosia.sh as app@ksionex.tk
+ DEBUG [f88d7f28] Command: /usr/bin/env chmod 700 /tmp/git-ssh-adder_web-production-gosia.sh
+  INFO [f88d7f28] Finished in 4.492 seconds with exit status 0 (successful).
+  INFO [d251f4c2] Running /usr/bin/env git ls-remote --heads git@github.com:gpks/adder_web.git as app@ksionex.tk
+ DEBUG [d251f4c2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-adder_web-production-gosia.sh" ; /usr/bin/env git ls-remote --heads git@github.com:gpks/adder_web.git )
+ DEBUG [d251f4c2] 	Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+ DEBUG [d251f4c2] 	Permission denied (publickey).
+ DEBUG [d251f4c2] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-29 09:48:09 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5cef11da] Running /usr/bin/env mkdir -p /tmp as app@ksionex.tk
+ DEBUG [5cef11da] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5cef11da] Finished in 6.817 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-adder_web-production-gosia.sh 0.0%
+  INFO Uploading /tmp/git-ssh-adder_web-production-gosia.sh 100.0%
+  INFO [af323e46] Running /usr/bin/env chmod 700 /tmp/git-ssh-adder_web-production-gosia.sh as app@ksionex.tk
+ DEBUG [af323e46] Command: /usr/bin/env chmod 700 /tmp/git-ssh-adder_web-production-gosia.sh
+  INFO [af323e46] Finished in 0.223 seconds with exit status 0 (successful).
+  INFO [0ea0e580] Running /usr/bin/env git ls-remote --heads git@github.com:gpks/adder_web.git as app@ksionex.tk
+ DEBUG [0ea0e580] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-adder_web-production-gosia.sh" ; /usr/bin/env git ls-remote --heads git@github.com:gpks/adder_web.git )
+ DEBUG [0ea0e580] 	Permission denied (publickey).
+ DEBUG [0ea0e580] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
