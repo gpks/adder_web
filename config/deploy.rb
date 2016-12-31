@@ -1,13 +1,16 @@
 # config valid only for current version of Capistrano
 lock "3.7.1"
 
-require 'rvm/capistrano'
-set :rvm_ruby_string, '1.9.3'
-
 set :application, "adder_web"
 set :repo_url, "git@github.com:gpks/adder_web.git"
 set :user, "app"
+set :ssh_options, { forward_agent: true }
 
+#unicorn needs this :/
+set :rails_env, :production
+
+set :rvm1_ruby_version, 'ruby-2.3.3@default'
+set :rvm1_map_bins,     %w{rake bundle ruby}
 # do not use sudo
 set :use_sudo, false
 set(:run_method) { use_sudo ? :sudo : :run }
@@ -21,6 +24,7 @@ set(:run_method) { use_sudo ? :sudo : :run }
 set :host, "#{fetch(:user)}@ksionex.tk" # We need to be able to SSH to that box as this user.
 # role :web, host
 role :app, "#{fetch(:host)}"
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets}
 # puts "#{fetch(:host)}"
 # Where will it be located on a server?
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"

@@ -3,12 +3,13 @@ source 'https://rubygems.org'
 gem 'hobbit', github: 'patriciomacadden/hobbit'
 gem 'adder', github: 'gpks/adder_gem'
 gem 'unicorn'
-gem 'rvm-capistrano'
 
 group :development do
   gem 'better_errors'
   gem 'rake'
+  gem 'rvm1-capistrano3'
   gem 'capistrano3-unicorn'
+  gem 'capistrano-bundler'
   gem "capistrano", "~> 3.7"
 end
 
