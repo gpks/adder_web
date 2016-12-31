@@ -24,7 +24,7 @@ set(:run_method) { use_sudo ? :sudo : :run }
 set :host, "#{fetch(:user)}@ksionex.tk" # We need to be able to SSH to that box as this user.
 # role :web, host
 role :app, "#{fetch(:host)}"
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets}
+set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 # puts "#{fetch(:host)}"
 # Where will it be located on a server?
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
