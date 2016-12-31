@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'hobbit', github: 'patriciomacadden/hobbit'
 gem 'adder', github: 'gpks/adder_gem'
 gem 'unicorn'
+gem 'bundler'
 
 group :development do
   gem 'better_errors'
