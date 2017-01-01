@@ -26,13 +26,15 @@ set :host, "#{fetch(:user)}@ksionex.tk" # We need to be able to SSH to that box 
 role :app, "#{fetch(:host)}"
 
 set :unicorn_roles, :app
-set :unicorn_rack_env, "#{fetch(:rack_env)}"
-set :unicorn_env, "#{fetch(:rack_env)}"
+# set :unicorn_rack_env, "production"
+# set :unicorn_env, "production"
+set :rails_env, "production"
 
 set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 # puts "#{fetch(:host)}"
 # Where will it be located on a server?
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
+set :unicorn_conf, "#{fetch(:deploy_to)}/current/unicorn.rb"
 set :unicorn_pid, "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
 
 # Unicorn control tasks
