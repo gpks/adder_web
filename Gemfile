@@ -8,7 +8,7 @@ gem 'bundler'
 group :development do
   gem 'better_errors'
   gem 'rake'
-  gem 'rvm1-capistrano3'
+  gem 'rvm1-capistrano3', require: false
   gem 'capistrano3-unicorn'
   gem 'capistrano-bundler'
   gem "capistrano", "~> 3.7"

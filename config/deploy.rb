@@ -40,7 +40,8 @@ set :unicorn_pid, "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
 # Unicorn control tasks
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:restart'
+    invoke 'unicorn:stop'
+    invoke 'unicorn:start'
   end
   # task :start do
   #   run "cd #{fetch(:deploy_to)}/current && bundle exec unicorn -c #{fetch(:unicorn_conf)} -E #{fetch(:rake_env)} -D"
