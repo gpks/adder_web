@@ -26,6 +26,7 @@ set :host, "#{fetch(:user)}@ksionex.tk" # We need to be able to SSH to that box 
 role :app, "#{fetch(:host)}"
 
 set :unicorn_roles, :app
+set :unicorn_rack_env, "#{fetch(:rack_env)}"
 
 set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 # puts "#{fetch(:host)}"
