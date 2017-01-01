@@ -34,14 +34,12 @@ set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 # puts "#{fetch(:host)}"
 # Where will it be located on a server?
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
-set :unicorn_conf, "#{fetch(:deploy_to)}/current/unicorn.rb"
-set :unicorn_pid, "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
+set :unicorn_pid, "#{fetch(:deploy_to)}/current/tmp/pids/unicorn.pid"
 
 # Unicorn control tasks
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:stop'
-    invoke 'unicorn:start'
+    invoke 'unicorn:restart'
   end
   # task :start do
   #   run "cd #{fetch(:deploy_to)}/current && bundle exec unicorn -c #{fetch(:unicorn_conf)} -E #{fetch(:rake_env)} -D"
