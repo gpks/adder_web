@@ -7,7 +7,7 @@ set :user, "app"
 set :ssh_options, { forward_agent: true }
 
 #unicorn needs this :/
-set :rails_env, :production
+set :rack_env, :production
 
 set :rvm1_ruby_version, 'ruby-2.3.3@default'
 set :rvm1_map_bins,     %w{rake bundle ruby}
@@ -28,7 +28,7 @@ set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 # puts "#{fetch(:host)}"
 # Where will it be located on a server?
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
-set :unicorn_conf, "#{fetch(:deploy_to)}/current/config/unicorn.rb"
+set :unicorn_conf, "#{fetch(:deploy_to)}/current/unicorn.rb"
 set :unicorn_pid, "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
 
 set :rack_env, :production
@@ -36,7 +36,7 @@ set :rack_env, :production
 # Unicorn control tasks
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:restart'
+    execute "if [ -f #{fetch(:unicorn_pid)} ]; then kill -USR2 `cat #{fetch(:unicorn_pid)}`; else cd #{fetch(:current_path)} && bundle exec unicorn -c #{fetch(:unicorn_conf)} -E #{fetch(:rack_env)} -D; fi"
   end
   # task :start do
   #   run "cd #{fetch(:deploy_to)}/current && bundle exec unicorn -c #{fetch(:unicorn_conf)} -E #{fetch(:rake_env)} -D"
