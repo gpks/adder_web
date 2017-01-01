@@ -7,11 +7,11 @@ class App < AdderApp::Application
     end
   end
 
-  get "/sth" do
-    "Really?"
-  end
-
   get '/' do
     "Go to the /sum?values=1,2,3 url"
+  end
+
+  get '/app' do
+    "My app"
   end
 end
