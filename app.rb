@@ -6,4 +6,8 @@ class App < AdderApp::Application
       "Provide params"
     end
   end
+
+  get '/' do
+    "Go to the /sum?values=1,2,3 url"
+  end
 end
