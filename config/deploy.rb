@@ -36,9 +36,7 @@ set :rack_env, :production
 # Unicorn control tasks
 namespace :deploy do
   task :restart do
-    on "#{fetch(:host)}" do
-      execute "if [ -f #{fetch(:unicorn_pid)} ]; then kill -USR2 `cat #{fetch(:unicorn_pid)}`; else cd #{fetch(:current_path)} && bundle exec unicorn -c #{fetch(:unicorn_conf)} -E #{fetch(:rack_env)} -D; fi"
-    end
+    invoke 'unicorn:restart'
   end
   # task :start do
   #   run "cd #{fetch(:deploy_to)}/current && bundle exec unicorn -c #{fetch(:unicorn_conf)} -E #{fetch(:rake_env)} -D"
