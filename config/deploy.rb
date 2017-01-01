@@ -33,7 +33,6 @@ set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 # puts "#{fetch(:host)}"
 # Where will it be located on a server?
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
-set :unicorn_conf, "#{fetch(:deploy_to)}/current/unicorn.rb"
 set :unicorn_pid, "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
 
 # Unicorn control tasks
