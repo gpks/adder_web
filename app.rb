@@ -11,7 +11,7 @@ class App < AdderApp::Application
     "Go to the /sum?values=1,2,3 url"
   end
 
-  get '/app' do
-    "My app"
+  get '/test' do
+    "My test"
   end
 end
