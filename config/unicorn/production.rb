@@ -18,6 +18,7 @@ worker_processes 3
 # use correct Gemfile on restarts
 before_exec do |server|
   ENV['BUNDLE_GEMFILE'] = "#{app_path}/current/Gemfile"
+  puts ENV['BUNDLE_GEMFILE']
 end
 
 # preload
