@@ -1,25 +1,12 @@
 # define paths and filenames
-deploy_to = "/home/app/adder_web"
+deploy_to = "/adder_web"
 rails_root = "#{deploy_to}/current"
 pid_file = "#{deploy_to}/shared/pids/unicorn.pid"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
-log_file = "#{rails_root}/log/unicorn.log"
-err_log = "#{rails_root}/log/unicorn_error.log"
+log_file = "#{deploy_to}/log/unicorn.log"
+err_log = "#{deploy_to}/log/unicorn_error.log"
 old_pid = pid_file + '.oldbin'
-
-# worker_processes 3
-# working_directory current_path
-# listen "/var/tmp/unicorn.sock", backlog: 64
-# timeout 180
-
-# pid "#{shared_path}/tmp/pids/unicorn.pid"
-
-# stderr_path "#{shared_path}/log/unicorn.stderr.log"
-# stdout_path "#{shared_path}/log/unicorn.stdout.log"
-
-# before_exec do |_server|
-#   ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
-# end
+working_directory rails_root
 
 timeout 30
 worker_processes 2 # increase or decrease
