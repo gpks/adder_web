@@ -1,13 +1,26 @@
 # define paths and filenames
 deploy_to = "/home/app/adder_web"
 rails_root = "#{deploy_to}/current"
-working_dir = "#{rails_root}/config/unicorn"
 pid_file = "#{deploy_to}/shared/pids/unicorn.pid"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
 log_file = "#{rails_root}/log/unicorn.log"
 err_log = "#{rails_root}/log/unicorn_error.log"
 old_pid = pid_file + '.oldbin'
-working_directory working_dir
+working_directory rails_root
+
+# worker_processes 3
+# working_directory current_path
+# listen "/var/tmp/unicorn.sock", backlog: 64
+# timeout 180
+
+# pid "#{shared_path}/tmp/pids/unicorn.pid"
+
+# stderr_path "#{shared_path}/log/unicorn.stderr.log"
+# stdout_path "#{shared_path}/log/unicorn.stdout.log"
+
+before_exec do |_server|
+  ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
+end
 
 timeout 30
 worker_processes 2 # increase or decrease
@@ -18,12 +31,11 @@ stderr_path err_log
 stdout_path log_file
 
 # make forks faster
-preload_app true 
 
 # make sure that Bundler finds the Gemfile
-before_exec do |server|
-  ENV['BUNDLE_GEMFILE'] = File.expand_path('../Gemfile', File.dirname(__FILE__))
-end
+# before_exec do |server|
+#   ENV['BUNDLE_GEMFILE'] = File.expand_path('../Gemfile', File.dirname(__FILE__))
+# end
 
 before_fork do |server, worker|
 
