@@ -18,9 +18,9 @@ working_directory rails_root
 # stderr_path "#{shared_path}/log/unicorn.stderr.log"
 # stdout_path "#{shared_path}/log/unicorn.stdout.log"
 
-# before_exec do |_server|
-#   ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
-# end
+before_exec do |_server|
+  ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
+end
 
 timeout 30
 worker_processes 2 # increase or decrease
