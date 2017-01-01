@@ -27,6 +27,7 @@ role :app, "#{fetch(:host)}"
 
 set :unicorn_roles, :app
 set :unicorn_rack_env, "#{fetch(:rack_env)}"
+set :unicorn_env, "#{fetch(:rack_env)}"
 
 set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 # puts "#{fetch(:host)}"
@@ -34,8 +35,6 @@ set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 set :unicorn_conf, "#{fetch(:deploy_to)}/current/unicorn.rb"
 set :unicorn_pid, "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
-
-set :rack_env, :production
 
 # Unicorn control tasks
 namespace :deploy do
