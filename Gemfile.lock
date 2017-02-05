@@ -5,6 +5,13 @@ GIT
     adder (0.0.0)
 
 GIT
+  remote: git://github.com/patriciomacadden/hobbit-contrib.git
+  revision: b7413b82eaffe9f4e4611a2e1e192038a3e016bf
+  specs:
+    hobbit-contrib (0.7.1)
+      hobbit
+
+GIT
   remote: git://github.com/patriciomacadden/hobbit.git
   revision: 9e88cb2f2eda971ec586fc148a1d9326bc450615
   specs:
@@ -40,6 +47,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.0.0)
+    pg (0.19.0)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -48,9 +56,11 @@ GEM
     rvm1-capistrano3 (1.4.0)
       capistrano (~> 3.0)
       sshkit (>= 1.2)
+    sequel (4.43.0)
     sshkit (1.11.5)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    tilt (2.0.5)
     unicorn (5.2.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -66,11 +76,15 @@ DEPENDENCIES
   capistrano-bundler
   capistrano3-unicorn
   hobbit!
+  hobbit-contrib!
   minitest
+  pg
   rack-test
   rake
   rvm1-capistrano3
+  sequel
+  tilt
   unicorn
 
 BUNDLED WITH
-   1.13.6
+   1.14.1

@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'hobbit', github: 'patriciomacadden/hobbit'
+gem 'hobbit-contrib', github: 'patriciomacadden/hobbit-contrib', require: 'hobbit/contrib'
 gem 'adder', github: 'gpks/adder_gem'
 gem 'unicorn'
 gem 'bundler'
+gem 'sequel'
+gem 'pg'
+gem 'tilt'
 
 group :development do
   gem 'better_errors'
