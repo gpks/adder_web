@@ -9,6 +9,7 @@ gem 'sequel'
 gem 'pg'
 gem 'tilt'
 gem 'dotenv'
+gem 'redis'
 
 group :development do
   gem 'better_errors'

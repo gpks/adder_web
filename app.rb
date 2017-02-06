@@ -7,11 +7,9 @@ class App < AdderApp::Application
   get '/sum' do
     begin
       sum = Adder[*ParamsParser.parse(request.params["values"])]
-      results = DB[:results]
-      results.insert(
-        result: sum
-      )
-      render "index", { sum: sum, results: results.reverse_order(:id).limit(5) }
+      ResultSaver.save(sum)
+      ResultFetcher.fetch
+      render "index", { sum: sum, results: ResultFetcher.fetch }
     rescue ParamsError
       "Provide params"
     end
