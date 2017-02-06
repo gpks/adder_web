@@ -8,6 +8,7 @@ gem 'bundler'
 gem 'sequel'
 gem 'pg'
 gem 'tilt'
+gem 'dotenv'
 
 group :development do
   gem 'better_errors'
