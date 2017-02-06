@@ -29,7 +29,7 @@ set :unicorn_roles, :app
 # set :unicorn_rack_env, "production"
 # set :unicorn_env, "production"
 set :rails_env, "production"
-
+set :linked_files, ['.env']
 set :linked_dirs, ['log', 'tmp/pids', 'tmp/cache', 'tmp/sockets']
 # puts "#{fetch(:host)}"
 # Where will it be located on a server?
