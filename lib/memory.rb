@@ -1,13 +1,27 @@
 class Memory
-  DATABASES = { pg: "postgres" }.freeze
-  class << self
-    def set
-      return Sequel.connect(ENV["DATABASE_URL"]) if postgres?
-      Redis.new
+  module Adapter
+    module Postgres
+      def self.set
+        Sequel.connect(ENV["DATABASE_URL"])
+      end
     end
 
-    def postgres?
-      ENV["DATABASE"] == DATABASES.fetch(:pg)
+    module Redis
+      def self.set
+        Redis.new
+      end
     end
+  end
+
+  def self.set
+    self.adapter.set
+  end
+
+  def self.adapter
+    Memory::Adapter.const_get(database)
+  end
+
+  def self.database
+    ENV["DATABASE"]
   end
 end
