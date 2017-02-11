@@ -18,10 +18,11 @@ describe App do
     end
 
     it 'must be ok' do
+      get '/sum?values=1'
       get '/sum?values=1,2,3'
       last_response.must_be :ok?
       last_response.body.must_match /6/
-      DB[:results].order(:id).last[:result].must_equal 6
+      last_response.body.must_match /1/
     end
   end
 end
